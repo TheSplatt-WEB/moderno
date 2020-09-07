@@ -1,8 +1,53 @@
-html{
-    box-sizing: border-box;
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+.header__top-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
 }
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
+.header__text{
+    margin-left: auto;
+    margin-right: 25px;
+    color: $text;
+    span{
+        color: $red;
+        margin-right: 4px;
+    }
+    a{
+        color: $text;
+    }
+}
+.header__btn{
+    padding: 4px;
+    width: 72px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+.header__btn-login{
+    background-color: $green;
+}
+.header__btn-registr{
+    background-color: $red;
+    margin-left: 7px;
+}
+.header__bottom{
+    background-color: $dark;
+    a{
+        color: #fff;
+        line-height: 30px;
+        font-size: 14px;
+    }
+}
+.menu__list{
+    li{
+        margin: 15px 0;
+       & + li{
+        margin-left: 35px;
+    } 
+    }
 }
