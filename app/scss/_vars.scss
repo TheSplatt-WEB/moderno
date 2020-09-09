@@ -4,3 +4,11 @@ $red: #e74c3c;
 $green: #8bc34a;
 $bg: #f4f6f5;
 $img: #b5b5b5;
+
+@mixin icon-g {
+    font-family: 'icomoon';
+    position: absolute;
+    left: 0;
+    color: $green;
+    font-size: 18px;
+}
