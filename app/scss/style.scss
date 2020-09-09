@@ -319,3 +319,40 @@
         font-weight: 24;
     }
 }
+
+//end adtantages
+//start author
+.author{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.author__box{
+    max-width: 650px;
+    width: 100%;
+    min-height: 215px;
+    background-color: $green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-title{
+        color: #fff;
+        font-size: 30px;
+        max-width: 280px;
+        line-height: 36px;
+        margin-right: 45px;
+        span{
+            font-weight: 700;
+        }
+    }
+    &-link{
+        background-color: #fff;
+        font-size: 18px;
+        padding: 14px 40px;
+    }
+}
+//end author
