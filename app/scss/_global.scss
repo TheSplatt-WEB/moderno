@@ -1,5 +1,6 @@
 html{
     box-sizing: border-box;
+    height: 100%;
 }
 *,
 *::before,
@@ -20,6 +21,20 @@ body{
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
+    height: 100%;
+}
+.wrapper{
+    display: flex;flex-direction: column;
+    min-height: 100%;
+}
+.content-page{
+    background-color: #f4f6f5;
+}
+.content{
+    flex: 1 0 auto;
+}
+.footer{
+    flex: 0 0 auto;
 }
 .container{
     max-width: 1200px;
@@ -47,4 +62,31 @@ body{
 .rate-star{
     display: inline-block;
     margin-right: 13px;
+}
+.breadcrumps{
+    &__inner{
+        padding: 45px 0px 40px;
+        font-size: 15px;
+    }
+    li{
+        display: inline-block;
+        & + li{
+            padding-left: 24px;
+            position: relative;
+            &::before{
+                content: "-";
+                position: absolute;
+                left: 8px;
+                color: $green;
+            }
+        }
+        &:last-child{
+            a, span{
+                color: $dark;
+            }
+        }
+    }
+    a{
+        color: #b0bec5;
+    }
 }
