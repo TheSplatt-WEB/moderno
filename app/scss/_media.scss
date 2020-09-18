@@ -1,0 +1,202 @@
+@media (max-width: 1080px){
+    .footer__inner{
+        flex-wrap: wrap;
+    }
+    .footer__item{
+        &-adress{
+            min-width: 100%;
+            margin-bottom: 30px;
+            .footer__item-text{
+                max-width: 100%;
+            }
+            .footer__item-adress{
+                max-width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 960px){
+    .header__text{
+        display: none;
+    }
+}
+@media (max-width: 860px){
+    .menu__list{
+        display: none;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        left: 0;
+        background-color: $dark;
+        border-bottom: 1px solid #fff;
+        top: 60px;
+        li{
+            display: block;
+            border-top: 1px solid #fff;
+            & + li{
+                margin-left: 0;
+            }
+            a{
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    .menu{
+        position: relative;
+    }
+    .header__menu-btn{
+        display: block;
+    }
+}
+@media (max-width: 769px){
+    .footer__inner{
+        justify-content: start;
+    }
+    .footer__item{
+        &-last{
+            min-width: 100%;
+        }
+    }
+    .footer__item-menu{
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 650px){
+    .header__top-inner{
+        position: relative;
+    }
+    .wrapper{
+        overflow-x: hidden;
+    }
+    .header__box-btn{
+        display: block;
+        height: 90px;
+        width: 90px;
+        position: absolute;
+        right: -15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+    }
+    .header__box{
+        border-radius: 0 0 0 50px;
+        flex-direction: column-reverse;
+        position: absolute;
+        background-color: #fff;
+        right: -115px;
+        top: 90px;
+        z-index: 3;
+        padding: 5px 0 20px;
+        transition: all .3s;
+        &.active{
+            right: -15px;
+        }
+    }
+    .header__user{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        &:hover{
+            .header__user-menu{
+                right: 92px;
+            }
+        }
+        &-menu{
+            left: auto;
+            right: -300px;
+            border: 1px solid #d5d5d5;
+            height: auto;
+            padding: 20px;
+            overflow: visible;
+            z-index: -1;
+            border: 1px solid #d5d5d5;
+        }
+    }
+    .header__basket, .header__massage, .header__notification{
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-menu{
+            z-index: -1;
+            border: 1px solid #d5d5d5;
+            right: -350px;
+            top: 0;
+            &.header__notification-menu{
+                top: auto;
+                bottom: -125%;
+            }
+            &.header__massage-menu{
+                top: -100%;
+            }
+        }
+        &-item{
+            padding: 20px;
+            height: auto;
+            overflow: visible;
+        }
+        &:hover{
+            .header__basket-menu{
+                right: 92px;
+            }
+        }
+    }
+    .header__basket-item-basket{
+        padding: 20px 20px 10px 20px;
+        display: block;
+        height: auto;
+        overflow: visible;
+    }
+    .header__user-menu{
+        top: 0;
+    }
+    .header__btn-logout, .header__btn-registr{
+        margin: 0px 10px;
+    }
+    .header__btn-registr{
+        margin-bottom: 10px;
+    }
+    .header__user-info{
+        display: none;
+    }
+    .header__box .header-icon{
+        margin-right: 0;
+    }
+    .header__basket, .header__massage, .header__notification{
+        height: 70px;
+    }
+}
+@media (max-width: 380px){
+    .header__basket, .header__massage, .header__notification{
+        top: 0;
+        &-menu{
+            z-index: 2;
+            border: 1px solid #d5d5d5;
+            right: -350px;
+            top: 70px;
+            &.header__notification-menu{
+                top: auto;
+                bottom: 100%;
+            }
+            &.header__massage-menu{
+                top: 100%;
+            }
+        }
+        &:hover{
+            .header__basket-menu{
+                right: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 861px){
+    .menu__list{
+        display: block !important;
+    }
+}

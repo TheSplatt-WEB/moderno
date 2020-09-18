@@ -38,4 +38,10 @@ $(function(){
       $('.icon-th-list').addClass('active');
       $('.icon-th-large').removeClass('active');
     });
+    $('.header__menu-btn').on('click', function(){
+      $('.menu__list').slideToggle();
+    });
+    $('.header__box-btn').on('click', function(){
+      $('.header__box').toggleClass('active');
+    });
 });
