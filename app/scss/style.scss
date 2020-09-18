@@ -27,6 +27,7 @@
 }
 .header__box{
     display: flex;
+    align-items: center;
     .header-icon{
         color: #a0a0a0;
         font-size: 14px;
@@ -53,9 +54,6 @@
         }
         .cart-quantity{
             background-color: $green;
-            &.home{
-                background-color: $red;
-            }
         }
         .envelope-quantity{
             background-color: $red;
@@ -69,13 +67,223 @@
     color: #fff;
     font-size: 12px;
     text-align: center;
+    height: 32px;
 }
 .header__btn-login{
     background-color: $green;
 }
-.header__btn-registr{
+.header__btn-registr, .header__btn-logout{
     background-color: $red;
     margin-left: 7px;
+}
+.header__btn-logout{
+    margin-left: 30px;
+}
+.login--on{
+    display: none;
+}
+.login--off{
+    display: block;
+}
+.header__user{
+    position: relative;
+    &-inner{
+        height: 90px;
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        position: relative;
+        &::before{
+            position: absolute;
+            color: #707070;
+            right: 0;
+            top: 35%;
+        }
+    }
+    &-photo{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        background-color: #00c2c3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &-info{
+        margin-left: 15px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    &-name{
+        font-weight: 500;
+        color: #000;
+    }
+    &-money{
+        font-weight: 700;
+        color: $green;
+    }
+    &-menu{
+        background-color: #fff;
+        padding: 0 20px;
+        position: absolute;
+        width: 158px;
+        top: 90px;
+        left: 0;
+        border-top: 0px solid #d5d5d5;
+        border-bottom: 0px solid #d5d5d5;
+        border-left: 1px solid #d5d5d5;
+        border-right: 1px solid #d5d5d5;
+        height: 0;
+        overflow: hidden;
+        transition: all .3s;
+        box-shadow: 0px 16px 20px 0px rgba(27, 27, 27, 0.75);
+        li{
+            & + li{
+                margin-top: 20px;
+            }
+        }
+        a{
+            display: block;
+            font-size: 12px;
+            color: $text;
+            padding-left: 15px;
+            position: relative;
+            &::before{
+                content: "\f105";
+                color: $green;
+                font-size: 14px;
+                font-family: 'icomoon';
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+    &:hover{
+        .header__user-menu{
+            display: block;
+            border: 1px solid #d5d5d5;
+            height: auto;
+            padding: 20px;
+            overflow: visible;
+        }
+    }
+}
+.header__basket, .header__massage, .header__notification{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    &-menu{
+        position: absolute;
+        width: 269px;
+        background-color: #fff;
+        border-top: 0px solid #d5d5d5;
+        border-bottom: 0px solid #d5d5d5;
+        border-left: 1px solid #d5d5d5;
+        border-right: 1px solid #d5d5d5;
+        top: 90px;
+        right: 0;
+        transition: all .3s;
+        box-shadow: 0px 16px 20px 0px rgba(27, 27, 27, 0.75);
+    }
+    &-item{
+        padding: 0px 20px;
+        display: flex;
+        align-items: center;
+        transition: all .3s;
+        height: 0;
+        overflow: hidden;
+    }
+    &-image{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 74px;
+        height: 58px;
+        margin-right: 20px;
+    }
+    &-info{
+        line-height: 18px;
+    }
+    &-title{
+        font-size: 15px;
+        font-weight: 500;
+        color: $dark;
+        &.massage-title{
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+    &-category{
+        color: $green;
+        font-size: 12px;
+        &.massage-category{
+            font-size: 11px;
+        }
+    }
+    &-price{
+        font-weight: 500;
+        color: #000;
+    }
+    .header__basket-item-basket{
+        display: block;
+        padding: 0 20px;
+        height: 0;
+        overflow: hidden;
+        transition: all .3s;
+    }
+    &-total{
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        color: $dark;
+    }
+    &-btn{
+        display: flex;
+        justify-content: center;
+        a{
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            background-color: $green;
+            display: block;
+            width: 100%;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            & + a{
+                margin-left: 7px;
+            }
+            &:nth-child(2){
+                background-color: $red;
+            }
+        }
+    }
+    &:hover{
+        .header__basket-menu{
+            border: 1px solid #d5d5d5;
+        }
+        .header__basket-item{
+            height: auto;
+            padding: 20px;
+            overflow: visible;
+        }
+        li + li{
+            border-top: 1px solid #e0e0e0;
+        }
+        .header__basket-item-basket{
+            padding: 20px 20px 10px 20px;
+            display: block;
+            height: auto;
+            overflow: visible;
+        }
+    }
+    &-date{
+        color: #707070;
+        font-size: 10px;
+    }
 }
 .header__bottom{
     background-color: $dark;
@@ -94,6 +302,7 @@
     } 
     }
 }
+  
 // end header
 // start search
 .search{
@@ -957,3 +1166,10 @@
     }
 }
 //end new items
+
+
+
+
+
+
+@import 'media';
